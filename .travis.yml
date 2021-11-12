@@ -5,4 +5,4 @@ node_js:
 git:
   quiet:  true
 
-script: npm run coverage
+after_success: npm run coverage
