@@ -5,69 +5,69 @@ function TestObject(property) {
   this.property = property
 }
 
-describe("Number", () => {
+describe("Number default, number input", () => {
  it("should return the input number", () =>{
      chai.expect(defaultTo(1, 10)).to.equal(1)
  });
 })
 
-describe("Number, null", () => {
+describe("Null input, default number", () => {
  it("should return the default value (10)", () =>{
      chai.expect(defaultTo(null, 10)).to.equal(10)
  });
 })
 
-describe("Number, undefined", () => {
+describe("Number default, undefined input", () => {
  it("should return the default value (10)", () =>{
      chai.expect(defaultTo(undefined, 10)).to.equal(10)
  });
 })
 
-describe("Number, NaN", () => {
+describe("Number default, NaN input", () => {
  it("should return the default value (10)", () =>{
      chai.expect(defaultTo(NaN, 10)).to.equal(10)
  });
 })
 
-describe("Number, string", () => {
+describe("Number default, string input", () => {
  it("should return the default value (10)", () =>{
      chai.expect(defaultTo("This is not a number", 10)).to.equal(10)
  });
 })
 
-describe("Number, infinity", () => {
+describe("Number default, positive infinity input", () => {
  it("should return infinity", () =>{
      chai.expect(defaultTo(Infinity, (10))).to.equal(Infinity)
  });
 })
 
-describe("String", () => {
+describe("String default and input", () => {
  it("should return the input string", () =>{
      chai.expect(defaultTo("hello", "default")).to.equal("hello")
  });
 })
 
-describe("String, null", () => {
+describe("String default, null input", () => {
  it("should return the default string", () =>{
      chai.expect(defaultTo(null, "default")).to.equal("default")
  });
 })
 
-describe("String, undefined", () => {
+describe("String default, undefined input", () => {
  it("should return the default string", () =>{
      chai.expect(defaultTo(undefined, "default")).to.equal("default")
  });
 })
 
-describe("String, number", () => {
+describe("String default, number input", () => {
  it("should return the default string", () =>{
      chai.expect(defaultTo(15, "default")).to.equal("default")
  });
 })
 
 
-describe("Object", () => {
- it("should return the test object", () =>{
+describe("Object default and input", () => {
+ it("should return the input object", () =>{
     var testObj = new TestObject("test");
     var defaultObj = new TestObject("default");
 
@@ -75,7 +75,7 @@ describe("Object", () => {
  });
 })
 
-describe("Object, number", () => {
+describe("Object default, number input", () => {
  it("should return the default object", () =>{
     var defaultObj = new TestObject("default");
 
@@ -83,7 +83,7 @@ describe("Object, number", () => {
  });
 })
 
-describe("Object, string", () => {
+describe("Object default, string input", () => {
  it("should return the default object", () =>{
     var defaultObj = new TestObject("default");
 
@@ -91,7 +91,7 @@ describe("Object, string", () => {
  });
 })
 
-describe("Object, null", () => {
+describe("Object default, null input", () => {
  it("should return the default object", () =>{
     var defaultObj = new TestObject("default");
 
@@ -99,7 +99,7 @@ describe("Object, null", () => {
  });
 })
 
-describe("Object, undefined", () => {
+describe("Object default, undefined input", () => {
  it("should return the default object", () =>{
     var defaultObj = new TestObject("default");
 
