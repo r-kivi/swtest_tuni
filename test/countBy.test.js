@@ -36,7 +36,7 @@ const arr = [1,2,3,1,1,1,5,5,6]
 const res3 = {1:4, 2:1, 3:1, 5:2, 6:1}
 
 describe("Counting numbers in array", () => {
-    it("Should return 2 for 31, 1 for 16 and 1 for infinity", () => {
+    it("Should return an object matching res3", () => {
         chai.expect(countBy(arr, value => value)).to.deep.equal(res3)
     })
 })
